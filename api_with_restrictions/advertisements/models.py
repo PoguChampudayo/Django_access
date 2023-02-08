@@ -31,12 +31,3 @@ class Advertisement(models.Model):
         auto_now=True
     )
 
-class AdvertisementFilter(filters.FilterSet):
-    """Фильтры для объявлений."""
-    date = DateFromToRangeFilter()
-    
-    # TODO: задайте требуемые фильтры
-
-    class Meta:
-        model = Advertisement
-        fields = ['created_at', 'status']
